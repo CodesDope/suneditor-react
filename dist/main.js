@@ -22754,6 +22754,9 @@ const _Context = function (element, cons, options) {
 
           if (!shift && freeFormatEl) {
             e.preventDefault();
+            if (selectionNode.parentNode.tagName == "PRE") {
+              break;
+            }
             const selectionFormat = selectionNode === freeFormatEl;
             const wSelection = core.getSelection();
             const children = selectionNode.childNodes,
